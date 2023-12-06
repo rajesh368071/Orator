@@ -12,10 +12,10 @@ import com.extentReports.ExtentTestManager;
 
 public class TC014 extends AgentSuit {
 	
-	@Test
+	
 	public void verifyChatMessage() throws InterruptedException, AWTException, IOException {
 		log.info("Verify able to user Quick Reply");
-		ExtentTestManager.startTest("(14) Verify able to user Quick Reply");
+		//ExtentTestManager.startTest("(14) Verify able to user Quick Reply");
 		routedchat.clickRoutedChat();
 		
 		openNewTab();

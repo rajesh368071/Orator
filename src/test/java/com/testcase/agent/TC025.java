@@ -12,10 +12,10 @@ import com.extentReports.ExtentTestManager;
 
 public class TC025 extends AgentSuit {
 	
-	@Test
+
 	public void verifyChatBoxOpen() throws InterruptedException, AWTException, IOException {
 		log.info("Verify Closed Chat Displayed");
-		ExtentTestManager.startTest("(25) Verify Closed Chat Displayed");
+		//ExtentTestManager.startTest("(25) Verify Closed Chat Displayed");
 		routedchat.clickRoutedChat();
 		
 		openNewTab();

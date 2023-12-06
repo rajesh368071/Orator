@@ -63,6 +63,29 @@ public class AgentSuit extends Base_Class{
 	//Testcases
 	TC001 tc001;
 	TC002 tc002;
+	TC003 tc003;
+	TC004 tc004;
+	TC005 tc005;
+	TC006 tc006;
+	TC007 tc007;
+	TC008 tc008;
+	TC009 tc009;
+	TC010 tc010;
+	TC011 tc011;
+	TC012 tc012;
+	TC013 tc013;
+	TC014 tc014;
+	TC015 tc015;
+	TC016 tc016;
+	TC017 tc017;
+	TC018 tc018;
+	TC019 tc019;
+	TC020 tc020;
+	TC021 tc021;
+	TC022 tc022;
+	TC023 tc023;
+	TC024 tc024;
+	TC025 tc025;
 	
 	public void commend() throws IOException {
 		Runtime.getRuntime().exec("taskkill /F /IM chrome.exe /T");
@@ -80,6 +103,31 @@ public class AgentSuit extends Base_Class{
 			
 			tc001 = new TC001();
 			tc002 = new TC002();
+			tc003 = new TC003();
+			tc004 = new TC004();
+			tc005 = new TC005();
+			tc006 = new TC006();
+			tc007 = new TC007();
+			tc008 = new TC008();
+			tc009 = new TC009();
+			tc010 = new TC010();
+			tc011 = new TC011();
+			tc012 = new TC012();
+			tc013 = new TC013();
+			tc014 = new TC014();
+			tc015 = new TC015();
+			tc016 = new TC016();
+			tc017 = new TC017();
+			tc018 = new TC018();
+			tc019 = new TC019();
+			tc020 = new TC020();
+			tc021 = new TC021();
+			tc022 = new TC022();
+			tc023 = new TC023();
+			tc024 = new TC024();
+			tc025 = new TC025();
+			
+			
 	}
 	
 	
@@ -108,6 +156,167 @@ public class AgentSuit extends Base_Class{
 					context.setAttribute("fileName", "Login");
 					Login();
 					tc002.verifyChatAnalyst();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC003":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc003.verifyChatAnalyst();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC004":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc004.verifychatrequest();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC005":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc005.verifychatrequest();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC006":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc006.verifyChatBoxOpen();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC007":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc007.verifyChatMessage();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC008":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc008.verifyChatBoxOpen();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC009":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc009.verifyChatBoxOpen();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC010":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc010.verifyChatBoxOpen();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC011":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc011.verifyChatBoxOpen();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC012":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc012.verifyChatMessage();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC013":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc013.verifyChatMessage();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC014":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc014.verifyChatMessage();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC015":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc015.verifychatrequest();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC016":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc016.verifyChatMessage();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC017":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc017.verifyChatBoxOpen();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC018":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc018.verifyChatBoxOpen();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC019":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc019.verifyChatBoxOpen();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC020":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc020.verifyChatBoxOpen();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC021":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc021.verifyChatBoxOpen();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC022":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc022.verifyChatBoxOpen();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC023":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc023.verifyChatBoxOpen();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC024":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc024.verifyChatBoxOpen();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC025":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc025.verifyChatBoxOpen();
 					Logout();
 					context.setAttribute("fileName", "Logout");
 				break;

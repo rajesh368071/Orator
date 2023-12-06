@@ -14,6 +14,6 @@ public class TC001 extends AgentSuit{
 		routedchat.clickReviewBord();
 		WaitForElementToBeVisible(routedchat.L_reviewbordtitle);
 		boolean isReviewBordDisplayed = ElementDisplayed(routedchat.L_reviewbordtitle);
-		assertEquals(isReviewBordDisplayed, false);
+		assertEquals(isReviewBordDisplayed, true);
 	}
 }

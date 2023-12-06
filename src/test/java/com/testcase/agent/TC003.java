@@ -8,11 +8,10 @@ import com.extentReports.ExtentTestManager;
 
 public class TC003 extends AgentSuit {
 	
-	@Test
 	public void verifyChatAnalyst() throws InterruptedException {
 		log.info("Verify CX Metrics Page Displayed");
 		
-		ExtentTestManager.startTest("(3) Verify CX Metrics Page Displayed");
+		//ExtentTestManager.startTest("(3) Verify CX Metrics Page Displayed");
 		routedchat.clickReviewBord();
 		reviewboard.clickCXMatrics();
 		

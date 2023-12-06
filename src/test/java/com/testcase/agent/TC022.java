@@ -12,10 +12,10 @@ import com.extentReports.ExtentTestManager;
 
 public class TC022 extends AgentSuit {
 	
-	@Test
+
 	public void verifyChatBoxOpen() throws InterruptedException, AWTException, IOException {
 		log.info("Verify Supervisor Able to Send message to Enduser");
-		ExtentTestManager.startTest("(22) Verify Supervisor Able to Send message to Enduser");
+		//ExtentTestManager.startTest("(22) Verify Supervisor Able to Send message to Enduser");
 		routedchat.clickRoutedChat();
 		
 		openNewTab();

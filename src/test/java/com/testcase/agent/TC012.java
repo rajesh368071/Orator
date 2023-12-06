@@ -12,10 +12,10 @@ import com.extentReports.ExtentTestManager;
 
 public class TC012 extends AgentSuit {
 	
-	@Test
+	
 	public void verifyChatMessage() throws InterruptedException, AWTException, IOException {
 		log.info("Verify Able to Send Image");
-		ExtentTestManager.startTest("(12) Verify Able to Send Image");
+		//ExtentTestManager.startTest("(12) Verify Able to Send Image");
 		routedchat.clickRoutedChat();
 		
 		openNewTab();

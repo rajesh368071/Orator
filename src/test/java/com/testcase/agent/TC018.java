@@ -12,10 +12,10 @@ import com.extentReports.ExtentTestManager;
 
 public class TC018 extends AgentSuit {
 	
-	@Test
+	
 	public void verifyChatBoxOpen() throws InterruptedException, AWTException, IOException {
 		log.info("Verify able to Transfer Chat to Supervisor");
-		ExtentTestManager.startTest("(18) Verify able to Transfer Chat to Supervisor");
+		//ExtentTestManager.startTest("(18) Verify able to Transfer Chat to Supervisor");
 		routedchat.clickRoutedChat();
 		
 		openNewTab();
