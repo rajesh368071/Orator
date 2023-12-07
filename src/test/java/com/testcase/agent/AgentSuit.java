@@ -334,7 +334,7 @@ public class AgentSuit extends Base_Class{
  
 		} catch (Exception e) {
  
-			System.out.println("<----------------Failed--- Test execution " + testdata.get("TestScenario").toString()
+			System.out.println("<----------------Failed--- Test execution " + testdata.get("Test_ID").toString()
 					+ " ---Failed ---------------->");
 			Log.error("" + e.getMessage());
 			String fileName = (String) context.getAttribute("fileName");

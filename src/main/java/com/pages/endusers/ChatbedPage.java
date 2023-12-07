@@ -18,7 +18,7 @@ import com.orator.pages.LoginPage;
 
 public class ChatbedPage extends Base_Class{
 	
-	public By L_chat = By.className("openChatBtn");
+	public By L_chat = By.xpath("//button[@class='openChatBtn']");
 	public By L_home = By.xpath("//i[@title='Main menu']");
 	public By L_iframe = By.cssSelector(".openChat>iframe");
 	public By L_chatwithus = By.xpath("//button[contains(., 'Chat with an agent')]");
@@ -49,10 +49,18 @@ public class ChatbedPage extends Base_Class{
 	}
 	
 	//click on chat button
-	public void clickChatButton() throws InterruptedException {
+	/*public void clickChatButton() throws InterruptedException {
 		Actions act = new Actions(driver);
 		WebElement ele = driver.findElement(L_chat); 
 		act.doubleClick(ele).perform();
+	}*/
+	
+	public void clickChatButton() throws InterruptedException {
+		try {
+			click(L_chat);
+		} catch (Exception e) {
+			ExtentTestManager.getTest().log(Status.FAIL, "Chat Button Not Clicked");
+		}
 	}
 	
 	public void clickFQA() throws InterruptedException {

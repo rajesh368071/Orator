@@ -68,7 +68,7 @@ public class TC011 extends AgentSuit {
 		
 		boolean isTranscriptionMailSent = ElementDisplayed(routedchat.L_mailpopup);
 		
-		if(isTranscriptionMailSent) {
+		if(isTranscriptionMailSent == true) {
         	assertEquals(isTranscriptionMailSent, true);
 			ExtentSuccessMessage("Chat Transcription Mail Sent");
         }
