@@ -12,7 +12,6 @@ import com.extentReports.ExtentTestManager;
 
 public class TC039 extends AdminSuit {
 	
-	@Test
 	public void verifySameWelcomeMessage() throws InterruptedException, AWTException, IOException {
 		log.info("Verify Themes Page Displayed");
 		refreshBrowser();

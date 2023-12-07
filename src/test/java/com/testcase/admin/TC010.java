@@ -8,10 +8,10 @@ import com.extentReports.ExtentTestManager;
 
 public class TC010 extends AdminSuit{
 	
-	@Test(priority = 10)
-	public void configurationPageVerify() throws InterruptedException {
+	
+	public void categoryPageVerify() throws InterruptedException {
 		log.info("10) Verify Category Page is Displayed");
-		ExtentTestManager.startTest("10) Verify Category Page is Displayed");
+		//ExtentTestManager.startTest("10) Verify Category Page is Displayed");
 		refreshBrowser();
 		home.clickSettings();
 		category.clickChat();

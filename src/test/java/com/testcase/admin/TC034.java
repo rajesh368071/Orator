@@ -8,11 +8,10 @@ import com.extentReports.ExtentTestManager;
 
 public class TC034 extends AdminSuit {
 	
-	@Test
 	public void verifySameWelcomeMessage() throws InterruptedException {
 		log.info("Verify Able to Perform Search in Manage Group");
 		refreshBrowser();
-		ExtentTestManager.startTest("34) Verify Able to Perform Search in Manage Group");
+		//ExtentTestManager.startTest("34) Verify Able to Perform Search in Manage Group");
 		home.clickSettings();
 		managegroup.clickGeneral();
 		managegroup.clickManageGroup();

@@ -11,11 +11,11 @@ import com.extentReports.ExtentTestManager;
 
 public class TC028 extends AdminSuit {
 	
-	@Test
+
 	public void verifySameWelcomeMessage() throws InterruptedException, AWTException, IOException {
 		log.info("Verify Holiday Group Page displayed");
 		refreshBrowser();
-		ExtentTestManager.startTest("28) Verify Holiday Group Page displayed");
+		//ExtentTestManager.startTest("28) Verify Holiday Group Page displayed");
 		home.clickSettings();
 		holidaygroup.clickGroup();
 		holidaygroup.clickHoliday();

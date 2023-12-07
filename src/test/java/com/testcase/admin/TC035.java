@@ -8,11 +8,10 @@ import com.extentReports.ExtentTestManager;
 
 public class TC035 extends AdminSuit {
 	
-	@Test
 	public void verifySameWelcomeMessage() throws InterruptedException {
 		log.info("Verify Ticket Page Displayed");
 		refreshBrowser();
-		ExtentTestManager.startTest("35) Verify Ticket Page Displayed");
+		//ExtentTestManager.startTest("35) Verify Ticket Page Displayed");
 		home.clickSettings();
 		ticket.clickGeneral();
 		ticket.clickTicket();

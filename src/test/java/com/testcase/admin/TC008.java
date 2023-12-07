@@ -41,10 +41,9 @@ public class TC008 extends AdminSuit{
 		
 	}
 	
-	@Test(priority = 8)
 	public void checkInactiveUserLogin() throws AWTException, IOException, InterruptedException {
 		log.info("8) Verify inActive user is able to login to Application");
-		ExtentTestManager.startTest("8) Verify inActive user is able to login to Application");
+		//ExtentTestManager.startTest("8) Verify inActive user is able to login to Application");
 		home.clickUserManagement();
 		WaitForElementToBeVisible(home.L_newuser);
 		userManage.enterSearch("Ramesh");

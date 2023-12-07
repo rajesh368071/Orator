@@ -11,7 +11,6 @@ import com.extentReports.ExtentTestManager;
 
 public class TC037 extends AdminSuit {
 	
-	@Test
 	public void verifySameWelcomeMessage() throws InterruptedException, AWTException, IOException {
 		log.info("Verify Able to Update Business Hours");
 		refreshBrowser();

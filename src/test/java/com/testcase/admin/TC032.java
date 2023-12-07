@@ -8,11 +8,10 @@ import com.extentReports.ExtentTestManager;
 
 public class TC032 extends AdminSuit{
 	
-	@Test
 	public void verifySameWelcomeMessage() throws InterruptedException {
 		log.info("Verify Manage Group Page Displayed");
 		refreshBrowser();
-		ExtentTestManager.startTest("32) Verify Manage Group Page Displayed");
+		//ExtentTestManager.startTest("32) Verify Manage Group Page Displayed");
 		home.clickSettings();
 		managegroup.clickGeneral();
 		managegroup.clickManageGroup();

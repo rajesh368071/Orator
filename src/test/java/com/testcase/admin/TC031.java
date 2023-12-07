@@ -11,11 +11,10 @@ import com.extentReports.ExtentTestManager;
 
 public class TC031 extends AdminSuit {
 	
-	@Test
 	public void verifySameWelcomeMessage() throws InterruptedException, AWTException, IOException {
 		log.info("Verify Able to Create New Business Hours");
 		refreshBrowser();
-		ExtentTestManager.startTest("31) Verify Able to Create New Business Hours");
+		//ExtentTestManager.startTest("31) Verify Able to Create New Business Hours");
 		home.clickSettings();
 		businesshours.clickGroup();
 		businesshours.clickBusinessHours();

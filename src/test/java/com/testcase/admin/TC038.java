@@ -8,10 +8,9 @@ import com.extentReports.ExtentTestManager;
 
 public class TC038 extends AdminSuit{
 	
-	@Test
 	public void verifyCreateQuickReply() throws InterruptedException {
 		log.info("Verify able to Update Quick Reply");
-		ExtentTestManager.startTest("38) Verify able to Update Quick Reply");
+		//ExtentTestManager.startTest("38) Verify able to Update Quick Reply");
 		refreshBrowser();
 		home.clickSettings();
 		category.clickChat();

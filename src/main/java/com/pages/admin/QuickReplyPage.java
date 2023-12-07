@@ -19,8 +19,8 @@ public class QuickReplyPage extends Base_Class{
 
 	
 	
-	public By L_popupcreate = By.xpath("//div[@role='alertdialog' or .='Quick Reply Created']");
-	public By L_popupupdate = By.xpath("//div[@role='alertdialog' or .='Quick Reply Updated']");
+	public By L_popupcreate = By.xpath("//div[@class='toast-top-right toast-container'][contains(.,'Quick Reply Created')]");
+	public By L_popupupdate = By.xpath("//div[@class='toast-top-right toast-container'][contains(.,'Quick Reply Updated')]");
 	
 	
 	public void clickQuickReplies() {

@@ -1,5 +1,6 @@
 package com.testcase.admin;
 
+import java.awt.AWTException;
 import java.io.File;
 import java.io.IOException;
 import java.util.Map;
@@ -31,6 +32,7 @@ import com.orator.pages.WelcomePage;
 import com.pages.admin.BusinessHoursPage;
 import com.pages.admin.ChatCategoriesPage;
 import com.pages.admin.ChatFeedbackPage;
+import com.pages.admin.ConfigurationPage;
 import com.pages.admin.FormsWelcomePage;
 import com.pages.admin.HolidayGroupPage;
 import com.pages.admin.HomePage;
@@ -65,6 +67,7 @@ public class AdminSuit extends Base_Class{
 	TicketPage ticket = new TicketPage();
 	ChatFeedbackPage chatfeedback = new ChatFeedbackPage();
 	ThemePage theme = new ThemePage();
+	ConfigurationPage configuration = new ConfigurationPage();
 	
 	//Testcases Obj
 	TC001 tc001;
@@ -99,10 +102,19 @@ public class AdminSuit extends Base_Class{
 	TC030 tc030;
 	TC031 tc031;
 	TC032 tc032;
+	TC033 tc033;
+	TC034 tc034;
+	TC035 tc035;
+	TC036 tc036;
+	TC037 tc037;
+	TC038 tc038;
+	TC039 tc039;
 	TC040 tc040;
 	TC041 tc041;
 	TC042 tc042;
 	TC043 tc043;
+	TC044 tc044;
+	TC045 tc045;
 
 
 	
@@ -113,7 +125,6 @@ public class AdminSuit extends Base_Class{
 	
 	@BeforeClass
 	public void reference() throws InterruptedException, IOException {
-		try {
 			excel = new ExcelReader("Admin_Suit");
 			log = new Log();
 			TestListener = new TestListener();
@@ -124,17 +135,47 @@ public class AdminSuit extends Base_Class{
 			tc002 = new TC002();
 			tc003 = new TC003();
 			tc004 = new TC004();
+			tc005 = new TC005();
+			tc006 = new TC006();
+			tc007 = new TC007();
+			tc008 = new TC008();
+			tc009 = new TC009();
+			tc010 = new TC010();
+			tc011 = new TC011();
+			tc012 = new TC012();
+			tc013 = new TC013();
+			tc014 = new TC014();
+			tc015 = new TC015();
+			tc016 = new TC016();
+			tc017 = new TC017();
+			tc018 = new TC018();
+			tc019 = new TC019();
+			tc020 = new TC020();
+			tc021 = new TC021();
+			tc022 = new TC022();
+			tc023 = new TC023();
+			tc024 = new TC024();
+			tc025 = new TC025();
+			tc026 = new TC026();
+			tc027 = new TC027();
+			tc028 = new TC028();
+			tc029 = new TC029();
+			tc030 = new TC030();
+			tc031 = new TC031();
+			tc032 = new TC032();
+			tc033 = new TC033();
+			tc034 = new TC034();
+			tc035 = new TC035();
+			tc036 = new TC036();
+			tc037 = new TC037();
+			tc038 = new TC038();
+			tc039 = new TC039();
 			tc040 = new TC040();
 			tc041 = new TC041();
 			tc042 = new TC042();
 			tc043 = new TC043();
-			Thread.sleep(2000);
-			//ExtentTestManager.startTest("Orator Admin Page Launched");
-			
-		} catch (Exception e) {
-			driver.quit();
-			commend();
-		}
+			tc044 = new TC044();
+			tc045 = new TC045();
 			
 	}
 	
@@ -146,7 +187,7 @@ public class AdminSuit extends Base_Class{
 		try {
 			String TestScenario = testdata.get("Test_ID").toString();
 			if (testdata.get("Run").toString().equalsIgnoreCase("Yes") && TestScenario.contains("TC")) {
-				ExtentTestManager.startTest(TestScenario);
+				ExtentTestManager.startTest(testdata.get("Description").toString());
 				System.out.println("\n");
 				System.out.println("<--------------------------------------- START NEW TESTCASE --------------------------------------------------------->");
 				ExtentSuccessMessage("*** Running test method " + TestScenario + "...");
@@ -164,6 +205,258 @@ public class AdminSuit extends Base_Class{
 					context.setAttribute("fileName", "Login");
 					Login();
 					tc002.verifyUserManagement();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC003":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc003.verifySettings();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC004":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc004.verifyCancelButton();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC005":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc005.createNewUser();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC006":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc006.searchCreatedUser();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC007":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc007.changeStatus();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC008":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc008.checkInactiveUserLogin();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC009":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc009.checkInactiveUserLogin();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC010":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc010.categoryPageVerify();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC011":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc011.verifyFieldsDisplayed();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC012":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc012.createCategory();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC013":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc013.createCategory();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC014":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc014.verifyQuickRepliesPage();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC015":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc015.verifyQuickReplyFormDisplayed();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC016":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc016.verifyCreateQuickReply();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC017":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc017.verifyWelcomePage();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC018":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc018.verifyFaq();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC019":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc019.verifySameWelcomeMessage();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC020":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc020.verifySameWelcomeMessage();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC021":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc021.verifySameWelcomeMessage();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC022":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc022.verifySameWelcomeMessage();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC023":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc023.verifySameWelcomeMessage();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC024":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc024.verifySameWelcomeMessage();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC025":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc025.verifySameWelcomeMessage();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC026":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc026.verifySameWelcomeMessage();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC027":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc027.verifySameWelcomeMessage();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC028":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc028.verifySameWelcomeMessage();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC029":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc029.verifySameWelcomeMessage();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC031":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc031.verifySameWelcomeMessage();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC032":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc032.verifySameWelcomeMessage();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC033":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc033.verifySameWelcomeMessage();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC034":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc034.verifySameWelcomeMessage();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC035":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc035.verifySameWelcomeMessage();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC036":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc036.verifySameWelcomeMessage();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC037":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc037.verifySameWelcomeMessage();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC038":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc038.verifyCreateQuickReply();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC039":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc039.verifySameWelcomeMessage();
 					Logout();
 					context.setAttribute("fileName", "Logout");
 				break;
@@ -195,13 +488,21 @@ public class AdminSuit extends Base_Class{
 					Logout();
 					context.setAttribute("fileName", "Logout");
 				break;
-				case "TC003":
-					///context.setAttribute("fileName", "Login");
+				case "TC044":
+					context.setAttribute("fileName", "Login");
 					Login();
-					
+					tc044.verifyConfigurationPageDisplayed();
 					Logout();
-					//context.setAttribute("fileName", "Logout");
+					context.setAttribute("fileName", "Logout");
 				break;
+				case "TC045":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc045.verifyHolidayGroupUpdate();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				
 				default:
 					break;
 				}
@@ -265,14 +566,26 @@ public class AdminSuit extends Base_Class{
 		}
 	}
 	
-	public void Logout() throws InterruptedException, IOException {
-		WaitForElementToBeVisible(welcome.L_username);
-		Thread.sleep(5000);
-		welcome.clickUsername();
-		Thread.sleep(3000);
-		jsClick(L_logout);
-		Thread.sleep(3000);
-		ExtentManager.getInstance().flush();
+	public void Logout() throws AWTException, IOException {
+		try {
+			Thread.sleep(5000);
+			if (ElementDisplayed(welcome.L_username)) {
+				Thread.sleep(2000);
+				welcome.clickUsername();
+				Thread.sleep(2000);
+				jsClick(L_logout);
+				driver.quit();
+				ExtentTestManager.getTest().log(Status.PASS, "Application Logout");
+			} else {
+				Log.error("Logout Not Visiable");
+			}
+			//driver.quit();
+			killExcel();
+			ExtentTestManager.endTest();
+			ExtentManager.getInstance().flush();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	
@@ -281,29 +594,8 @@ public class AdminSuit extends Base_Class{
 
 	@AfterSuite
 	public void CloseAllBrowser() throws InterruptedException, IOException {
-		/*try {
-			WaitForElementToBeVisible(welcome.L_username);
-			Thread.sleep(5000);
-			welcome.clickUsername();
-			Thread.sleep(3000);
-			jsClick(L_logout);
-			Thread.sleep(3000);
-			driver.quit();
-			commend();
-			ExtentTestManager.getTest().log(Status.PASS, "Application Logout");
-			ExtentManager.getInstance().flush();
-		} catch (Exception e) {
-			driver.quit();
-			commend();
-			ExtentTestManager.getTest().log(Status.FAIL, "Application Quit");
-			log.error(e.toString());
-			ExtentManager.getInstance().flush();
-		} */
-		
 		ExtentTestManager.getTest().log(Status.PASS, "Application Logout");
 		ExtentManager.getInstance().flush();
-		driver.quit();
-		
 	}
 	
 	
@@ -311,16 +603,14 @@ public class AdminSuit extends Base_Class{
 		try {
 			Base_Class.AdminSetUp();
 			WaitForElementToBeVisible(welcome.L_username);
+			ExtentTestManager.getTest().log(Status.PASS, "Application Login " + Base_Class.Pagetitle);
+			ExtentSuccessMessage("Login successful !");
 		} catch (IOException e) {
-			driver.quit();
-			commend();
 			ExtentTestManager.startTest("Orator Logout");
 			e.printStackTrace();
 			ExtentTestManager.getTest().log(Status.FAIL, "Application fail to Login " + "With error ");
 			ExtentErrorMessage("Issue while login into the application ");
 		} catch (InterruptedException e) {
-			driver.quit();
-			commend();
 			ExtentTestManager.getTest().log(Status.FAIL, "Application fail to Login With error");
 			ExtentErrorMessage("Issue while login into the application");
 			e.printStackTrace();

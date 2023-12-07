@@ -8,7 +8,6 @@ import com.extentReports.ExtentTestManager;
 
 public class TC017 extends AdminSuit{
 	
-	@Test
 	public void verifyWelcomePage() throws InterruptedException {
 		log.info("Verify Forms Welcome Page Displayed");
 		ExtentTestManager.startTest("17) Verify Forms Welcome Page Displayed");

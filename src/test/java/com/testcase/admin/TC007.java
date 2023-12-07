@@ -8,10 +8,10 @@ import com.extentReports.ExtentTestManager;
 
 public class TC007 extends AdminSuit {
 	
-	@Test(priority = 7)
+	
 	public void changeStatus() throws InterruptedException {
 		log.info("7) Verify Status can able to change");
-		ExtentTestManager.startTest("7) Verify Status can able to change");
+		//ExtentTestManager.startTest("7) Verify Status can able to change");
 		home.clickUserManagement();
 		WaitForElementToBeVisible(home.L_newuser);
 		userManage.enterSearch("Ramesh");

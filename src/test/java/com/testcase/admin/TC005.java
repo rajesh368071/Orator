@@ -6,7 +6,6 @@ import com.extentReports.ExtentTestManager;
 
 public class TC005 extends AdminSuit {
 	
-	@Test
 	public void createNewUser() throws InterruptedException {
 		log.info("5) Verify New User is Created");
 		ExtentTestManager.startTest("Verify New User is Created");

@@ -11,18 +11,18 @@ import com.extentReports.ExtentTestManager;
 
 public class TC029 extends AdminSuit {
 	
-	@Test
-	public void verifySameWelcomeMessage() throws InterruptedException, AWTException, IOException {
+	public String verifySameWelcomeMessage() throws InterruptedException, AWTException, IOException {
 		log.info("Verify Able to Create New Holiday Group");
 		refreshBrowser();
-		ExtentTestManager.startTest("29) Verify Able to Create New Holiday Group");
+		//ExtentTestManager.startTest("29) Verify Able to Create New Holiday Group");
 		home.clickSettings();
 		holidaygroup.clickGroup();
 		holidaygroup.clickHoliday();
 		WaitForElementToBeVisible(holidaygroup.L_holidayPageTitle);
 		holidaygroup.clickAddNew();
-		holidaygroup.enterName(fakedata.getRandom());
-		holidaygroup.selectRegion();
+		String holidayGroupName = fakedata.getRandom();
+		holidaygroup.enterName(holidayGroupName);
+		holidaygroup.selectRegion("Europe");
 		holidaygroup.selectRole();
 		//holidaygroup.clickCancel();
 		holidaygroup.clickSubmit();
@@ -32,6 +32,9 @@ public class TC029 extends AdminSuit {
 			assertEquals(isPopUpDisplayed, true);
 			ExtentSuccessMessage("Holiday Group Created Successfully");
 		}
+		
+		return holidayGroupName;
 	}
+	
 	
 }

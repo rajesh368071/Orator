@@ -11,7 +11,7 @@ import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
 import com.extentReports.ExtentTestManager;
-
+ 
 public class TC009 extends AdminSuit {
 	
 	public void common() throws AWTException, IOException, InterruptedException {
@@ -53,10 +53,9 @@ public class TC009 extends AdminSuit {
 		
 	}
 	
-	@Test(priority=9)
 	public void checkInactiveUserLogin() throws AWTException, IOException, InterruptedException {
 		log.info("9) Verify Proper Error Message Shows to User for in active user login");
-		ExtentTestManager.startTest("9) Verify Proper Error Message Shows to User for in active user login");
+		//ExtentTestManager.startTest("9) Verify Proper Error Message Shows to User for in active user login");
 		home.clickUserManagement();
 		WaitForElementToBeVisible(home.L_newuser);
 		userManage.enterSearch("Ramesh");

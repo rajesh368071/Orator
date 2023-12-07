@@ -3,6 +3,7 @@ package com.pages.admin;
 import org.openqa.selenium.By;
 
 import com.BasePackage.Base_Class;
+import com.Utility.Log;
 import com.aventstack.extentreports.Status;
 import com.extentReports.ExtentTestManager;
 
@@ -13,8 +14,7 @@ public class HolidayGroupPage extends Base_Class {
 	public By L_addNew = By.xpath("//span[.='New']");
 	public By L_name = By.xpath("//input[@formcontrolname='name']");
 	
-	public By L_region = By.xpath("//mat-label[.='Region']");
-	public By L_region_option = By.xpath("//mat-option[@value='Makati']");
+	
 	
 	public By L_choose_role = By.xpath("//mat-label[.='Choose Role']");
 	public By L_role_option = By.xpath("//span[contains(normalize-space(),'Agent')]");
@@ -23,10 +23,13 @@ public class HolidayGroupPage extends Base_Class {
 	public By L_submit = By.xpath("//div[.='Submit']");
 	public By L_cancel = By.xpath("//div[.='Cancel']");
 	
+	public By L_edit = By.xpath("(//i[.='edit'])[1]");
+	
 	
 	//identifiers
 	public By L_holidayPageTitle = By.xpath("(//div[.=' Holiday Group'])[position()=1]");
-	public By L_popupcreate = By.xpath("//div[@role='alertdialog' or .='Holiday Group Created']");
+	public By L_popupcreate = By.xpath("//div[@class='toast-top-right toast-container'][contains(.,'Holiday Group Created')]");
+	public By L_popupupdate = By.xpath("//div[@class='toast-top-right toast-container'][contains(.,'Holiday Group Updated')]");
 	
 	
 	public void clickGroup() {
@@ -83,10 +86,15 @@ public class HolidayGroupPage extends Base_Class {
 		}
 	}
 	
-	public void selectRegion() {
+	
+	public By L_region = By.xpath("//mat-label[.='Region']");
+	
+	public void selectRegion(String option) {
 		try {
+			By L_region_option = By.xpath("//span[.="+option+"]");
+			
 			jsClick(L_region);
-			jsClick(L_region_option);
+			jsClick(FindElementByText(option));
 			KeyOperation("TAB");
 			ExtentTestManager.getTest().log(Status.PASS, "Region Selected");
 		} catch (Exception e) {
@@ -102,6 +110,15 @@ public class HolidayGroupPage extends Base_Class {
 			ExtentTestManager.getTest().log(Status.PASS, "Role Selected");
 		} catch (Exception e) {
 			ExtentTestManager.getTest().log(Status.FAIL, "Role Not Selected");
+		}
+	}
+	
+	public void clickEdit() {
+		try {
+			click(L_edit);
+			ExtentTestManager.getTest().log(Status.PASS, "Edit Click Successfully");
+		} catch (Exception e) {
+			ExtentTestManager.getTest().log(Status.FAIL, "Edit Not Click");
 		}
 	}
 	

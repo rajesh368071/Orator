@@ -11,12 +11,10 @@ import org.testng.annotations.Test;
 import com.extentReports.ExtentTestManager;
 
 public class TC018 extends AdminSuit {
-	
-	@Test
 	public void verifyFaq() throws InterruptedException, AWTException, IOException {
 		log.info("Verify FAQ Button is Displayed if FAQ is Checked in Admin");
 		refreshBrowser();
-		ExtentTestManager.startTest("18) Verify FAQ Button is Displayed if FAQ is Checked in Admin");
+		//ExtentTestManager.startTest("18) Verify FAQ Button is Displayed if FAQ is Checked in Admin");
 		home.clickSettings();
 		formwelcome.clickGeneral();
 		formwelcome.clickForms();

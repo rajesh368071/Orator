@@ -15,7 +15,7 @@ public class TC042 extends AdminSuit {
 	public void verifySameWelcomeMessage() throws InterruptedException, AWTException, IOException {
 		log.info("Verify Theme Live Chat Console Tab");
 		refreshBrowser();
-		ExtentTestManager.startTest("40) Verify Theme Live Chat Console Tab");
+		//ExtentTestManager.startTest("40) Verify Theme Live Chat Console Tab");
 		home.clickSettings();	
 		theme.clickSystem();
 		theme.clickTheme();

@@ -8,10 +8,10 @@ import com.extentReports.ExtentTestManager;
 
 public class TC015 extends AdminSuit{
 	
-	@Test(priority = 15)
+
 	public void verifyQuickReplyFormDisplayed() throws InterruptedException {
 		log.info("Verify Quick Reply Form Model Displayed");
-		ExtentTestManager.startTest("15) Verify Quick Reply Form Model Displayed");
+		//ExtentTestManager.startTest("15) Verify Quick Reply Form Model Displayed");
 		refreshBrowser();
 		home.clickSettings();
 		category.clickChat();

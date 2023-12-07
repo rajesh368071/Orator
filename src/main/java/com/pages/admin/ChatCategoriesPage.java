@@ -18,8 +18,8 @@ public class ChatCategoriesPage extends Base_Class{
 	public By L_submit = By.xpath("//div[.='Submit']");
 	public By L_cancel = By.xpath("//div[.='Cancel']");
 	
-	public By L_popupcreate = By.xpath("//div[@role='alertdialog' or .='Category Created']");
-	public By L_popupupdate = By.xpath("//div[@role='alertdialog' or .='Category Updated']");
+	public By L_popupcreate = By.xpath("//div[@class='toast-top-right toast-container'][contains(.,'Category Created')]");
+	public By L_popupupdate = By.xpath("//div[@class='toast-top-right toast-container'][contains(.,'Category Updated')]");
 	public By L_editIcon = By.xpath("(//i[.='edit'])[position()=1]");
 	
 	public By L_cell_category = By.xpath("(//td[@class='mat-cell cdk-cell cdk-column-name mat-column-name ng-star-inserted'])[1]//div/span");

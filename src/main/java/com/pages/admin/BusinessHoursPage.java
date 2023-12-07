@@ -37,8 +37,8 @@ public class BusinessHoursPage extends Base_Class {
 	
 	//identifiers
 	public By L_business_hours = By.xpath("(//div[.=' Business Hours'])[position()=1]");
-	public By L_popupcreate = By.xpath("//div[@role='alertdialog' or .='Business Hours Created']");
-	public By L_popupupdate = By.xpath("//div[@role='alertdialog' or .='Business Hours Updated']");
+	public By L_popupcreate = By.xpath("//div[@class='toast-top-right toast-container'][contains(.,'Business Hours Created')]");
+	public By L_popupupdate = By.xpath("//div[@class='toast-top-right toast-container'][contains(.,'Business Hours Updated')]");
 	
 	
 	public void clickGroup() {

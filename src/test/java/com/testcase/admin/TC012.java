@@ -10,10 +10,10 @@ import com.extentReports.ExtentTestManager;
 
 public class TC012 extends AdminSuit {
 	
-	@Test(priority = 12)
+	
 	public void createCategory() throws InterruptedException {
 		log.info("Verify Able to Create Category");
-		ExtentTestManager.startTest("12) Verify Able to Create Category");
+		//ExtentTestManager.startTest("12) Verify Able to Create Category");
 		refreshBrowser();
 		home.clickSettings();
 		category.clickChat();

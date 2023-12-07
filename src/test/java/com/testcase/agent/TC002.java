@@ -17,11 +17,7 @@ public class TC002 extends AgentSuit {
 		reviewboard.clickChatAnalist();
 		
 		boolean isChatAnalystDisplayed = ElementDisplayed(reviewboard.L_chatResolutionTime);
-		if(isChatAnalystDisplayed) {
-			assertEquals(isChatAnalystDisplayed, true);
-			ExtentSuccessMessage("Chat Analistics Page Displayed");
-		}
-		
+		assertEquals(isChatAnalystDisplayed, true);
 	}
 
 }

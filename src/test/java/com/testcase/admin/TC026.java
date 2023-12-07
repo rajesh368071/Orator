@@ -12,11 +12,10 @@ import com.extentReports.ExtentTestManager;
 
 public class TC026 extends AdminSuit {
 	
-	@Test
 	public void verifySameWelcomeMessage() throws InterruptedException, AWTException, IOException {
 		log.info("Verify Able to Enable Wramp Up Aggrement Option");
 		refreshBrowser();
-		ExtentTestManager.startTest("26) Verify Able to Enable Wramp Up Aggrement Option");
+		//ExtentTestManager.startTest("26) Verify Able to Enable Wramp Up Aggrement Option");
 		home.clickSettings();
 		formwelcome.clickGeneral();
 		formwelcome.clickForms();

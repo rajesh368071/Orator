@@ -12,11 +12,10 @@ import com.extentReports.ExtentTestManager;
 
 public class TC020 extends AdminSuit {
 	
-	@Test
 	public void verifySameWelcomeMessage() throws InterruptedException, AWTException, IOException {
 		log.info("Verify data capture form displayed when respective check box is checked");
 		refreshBrowser();
-		ExtentTestManager.startTest("20) Verify data capture form displayed when respective check box is checked");
+		//ExtentTestManager.startTest("20) Verify data capture form displayed when respective check box is checked");
 		home.clickSettings();
 		formwelcome.clickGeneral();
 		formwelcome.clickForms();

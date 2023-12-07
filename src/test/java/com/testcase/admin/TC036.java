@@ -8,7 +8,7 @@ import com.extentReports.ExtentTestManager;
 
 public class TC036 extends AdminSuit {
 	
-	@Test
+	
 	public void verifySameWelcomeMessage() throws InterruptedException {
 		log.info("Verify Chat Feedback Page Displayed");
 		refreshBrowser();

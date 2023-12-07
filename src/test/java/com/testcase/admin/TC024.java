@@ -12,11 +12,10 @@ import com.extentReports.ExtentTestManager;
 
 public class TC024 extends AdminSuit {
 	
-	@Test
 	public void verifySameWelcomeMessage() throws InterruptedException, AWTException, IOException {
 		log.info("Verify Able to Enable Anonymous chat request Option");
 		refreshBrowser();
-		ExtentTestManager.startTest("24) Verify Able to Enable Anonymous chat request Option");
+		//ExtentTestManager.startTest("24) Verify Able to Enable Anonymous chat request Option");
 		home.clickSettings();
 		formwelcome.clickGeneral();
 		formwelcome.clickForms();

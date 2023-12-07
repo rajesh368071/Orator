@@ -8,11 +8,10 @@ import com.extentReports.ExtentTestManager;
 
 public class TC033 extends AdminSuit {
 	
-	@Test
 	public void verifySameWelcomeMessage() throws InterruptedException {
 		log.info("Verify Able to Create New Manage Group");
 		refreshBrowser();
-		ExtentTestManager.startTest("33) Verify Able to Create New Manage Group");
+		//ExtentTestManager.startTest("33) Verify Able to Create New Manage Group");
 		home.clickSettings();
 		managegroup.clickGeneral();
 		managegroup.clickManageGroup();

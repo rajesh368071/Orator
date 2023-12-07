@@ -33,11 +33,10 @@ public class TC019 extends AdminSuit{
 		
 	}
 	
-	@Test
 	public void verifySameWelcomeMessage() throws InterruptedException, AWTException, IOException {
 		log.info("Verify Opening Message Displayed in Enduser as Given in Admin");
 		refreshBrowser();
-		ExtentTestManager.startTest("19) Verify Opening Message Displayed in Enduser as Given in Admin");
+		//ExtentTestManager.startTest("19) Verify Opening Message Displayed in Enduser as Given in Admin");
 		home.clickSettings();
 		formwelcome.clickGeneral();
 		formwelcome.clickForms();

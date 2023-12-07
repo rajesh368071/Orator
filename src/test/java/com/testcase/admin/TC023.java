@@ -12,11 +12,10 @@ import com.extentReports.ExtentTestManager;
 
 public class TC023 extends AdminSuit {
 	
-	@Test
 	public void verifySameWelcomeMessage() throws InterruptedException, AWTException, IOException {
 		log.info("Verify able to delete Field from data Capture form");
 		refreshBrowser();
-		ExtentTestManager.startTest("23) Verify able to delete Field from data Capture form");
+		//ExtentTestManager.startTest("23) Verify able to delete Field from data Capture form");
 		home.clickSettings();
 		formwelcome.clickGeneral();
 		formwelcome.clickForms();
