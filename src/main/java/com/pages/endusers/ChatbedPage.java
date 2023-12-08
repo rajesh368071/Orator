@@ -40,7 +40,7 @@ public class ChatbedPage extends Base_Class{
 	public By L_addedField = By.id("enduserLocation");
 	public By L_goAnynomousenduser = By.xpath("//input[@id='goAnonymousCheckBox-input']");
 	public By L_acceptAggrementenduser = By.xpath("//input[@id='clickWrapCheckBox-input']");
-	public By L_message = By.xpath("(//div[@class='normal-msg ng-tns-c0-0 ng-star-inserted'])[1]");
+	public By L_message = By.xpath("(//div[contains(@class,'normal-msg')])[1]");
 	public By L_imagemessage = By.xpath("(//div[contains(@class,'chat-message-text')])[1]//img");
 	
 	//verify chat button is displayed
@@ -145,7 +145,7 @@ public class ChatbedPage extends Base_Class{
 	
 	
 	public By L_feedback_submit = By.xpath("(//button[.='Submit'])[1]");
-	public By L_feedback_submission_greeting = By.xpath("(//div[@class='normal-msg ng-tns-c0-0 ng-star-inserted'])[2]");
+	public By L_feedback_submission_greeting = By.xpath("(//div[contains(@class,'normal-msg')])[2]");
 	public void clickFeedbackSubmit() {
 		try {
 			click(L_feedback_submit);

@@ -63,9 +63,9 @@ public class TC019 extends AgentSuit {
 		
 		driver.switchTo().window(parent);
 		routedchat.clickEscalate();
-		routedchat.selectEscalateChooseSupervisor();
-		routedchat.selectEscalateCategory();
-		routedchat.selectEscalateSubCategory();
+		routedchat.selectEscalateChooseSupervisor("nuon arunmeanith");
+		routedchat.selectEscalateCategory("General");
+		routedchat.selectEscalateSubCategory("Category 1");
 		WaitForElementToBeVisible(routedchat.L_escalate_comment);
 		routedchat.enterComment("Escalated");
 		routedchat.clickSubmit();

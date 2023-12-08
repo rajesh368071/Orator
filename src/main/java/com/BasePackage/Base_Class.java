@@ -1067,6 +1067,16 @@ public class Base_Class {
 		}
 		return flag;
 	}
+	
+	public boolean isEnabled(By element) {
+		boolean flag;
+		if(driver.findElement(element).isEnabled()) {
+			flag = true;
+		}else {
+			flag = false;
+		}
+		return flag;
+	}
 
 	////////////////// To Do //////////////////
 

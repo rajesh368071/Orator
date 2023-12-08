@@ -568,7 +568,7 @@ public class AdminSuit extends Base_Class{
 	
 	public void Logout() throws AWTException, IOException {
 		try {
-			Thread.sleep(5000);
+			Thread.sleep(2000);
 			if (ElementDisplayed(welcome.L_username)) {
 				Thread.sleep(2000);
 				welcome.clickUsername();
@@ -580,7 +580,7 @@ public class AdminSuit extends Base_Class{
 				Log.error("Logout Not Visiable");
 			}
 			//driver.quit();
-			killExcel();
+			//killExcel();
 			ExtentTestManager.endTest();
 			ExtentManager.getInstance().flush();
 		} catch (InterruptedException e) {

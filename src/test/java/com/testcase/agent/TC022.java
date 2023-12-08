@@ -14,8 +14,8 @@ public class TC022 extends AgentSuit {
 	
 
 	public void verifyChatBoxOpen() throws InterruptedException, AWTException, IOException {
-		log.info("Verify Supervisor Able to Send message to Enduser");
-		//ExtentTestManager.startTest("(22) Verify Supervisor Able to Send message to Enduser");
+		log.info("Verify Supervisor Able to re-transfer chat request");
+		//ExtentTestManager.startTest("(22) Verify Supervisor Able to re-transfer chat request");
 		routedchat.clickRoutedChat();
 		
 		openNewTab();
@@ -63,9 +63,9 @@ public class TC022 extends AgentSuit {
 		
 		driver.switchTo().window(parent);
 		routedchat.clickEscalate();
-		routedchat.selectEscalateChooseSupervisor();
-		routedchat.selectEscalateCategory();
-		routedchat.selectEscalateSubCategory();
+		routedchat.selectEscalateChooseSupervisor("nuon arunmeanith");
+		routedchat.selectEscalateCategory("General");
+		routedchat.selectEscalateSubCategory("Category 1");
 		WaitForElementToBeVisible(routedchat.L_escalate_comment);
 		routedchat.enterComment(message);
 		routedchat.clickSubmit();
@@ -81,7 +81,7 @@ public class TC022 extends AgentSuit {
 		routedchat.clickSend();
 		
 		routedchat.clickTransferChat();
-		supervisor.clickTransferChatTo();
+		supervisor.clickTransferChatTo("oeun virakchay");
 		
 		Thread.sleep(2000);
 		driver.switchTo().window(parent);
@@ -91,7 +91,7 @@ public class TC022 extends AgentSuit {
 		
 		Thread.sleep(2000);
 		String nameValue = GetELementValue(routedchat.L_usernamecontactmychat);
-		if(nameValue.equals(name)) {
+		if(true) {
 			assertEquals(nameValue, name);
         	log.info(nameValue+" - "+ name);
 			ExtentSuccessMessage("Retransfered Successfully");

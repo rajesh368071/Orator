@@ -14,19 +14,23 @@ public class TC022 extends AdminSuit {
 	
 	public void verifySameWelcomeMessage() throws InterruptedException, AWTException, IOException {
 		log.info("Verify Able to add New Field to Data Capture Form");
-		refreshBrowser();
+		//refreshBrowser();
 		//ExtentTestManager.startTest("22) Verify Able to add New Field to Data Capture Form");
 		home.clickSettings();
 		formwelcome.clickGeneral();
 		formwelcome.clickForms();
 		formwelcome.clickWelcomepage();
 		WaitForElementToBeVisible(formwelcome.L_opening_msg);
-		Thread.sleep(5000);
+		
+		if(!isEnabled(formwelcome.L_data_capture_form_checkbox)) {
+			formwelcome.clickDataCaptureForm();
+		}
+		
 		formwelcome.clickaddField();
 		formwelcome.enterFieldName("Location");
 		formwelcome.selectDataType();
-		Thread.sleep(2000);
 		formwelcome.clickSubmit();
+		Thread.sleep(2000);
 		
 		openNewTab();
 		Thread.sleep(1000);
@@ -50,6 +54,6 @@ public class TC022 extends AdminSuit {
 		
 		formwelcome.clickDeleteIcon();
 		formwelcome.clickSubmit();
-		
+		Thread.sleep(6000);
 	}
 }

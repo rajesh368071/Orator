@@ -138,7 +138,7 @@ public class AgentSuit extends Base_Class{
 		try {
 			String TestScenario = testdata.get("Test_ID").toString();
 			if (testdata.get("Run").toString().equalsIgnoreCase("Yes") && TestScenario.contains("TC")) {
-				ExtentTestManager.startTest(TestScenario);
+				ExtentTestManager.startTest(testdata.get("Description").toString());
 				System.out.println("\n");
 				System.out.println("<--------------------------------------- START NEW TESTCASE --------------------------------------------------------->");
 				ExtentSuccessMessage("*** Running test method " + TestScenario + "...");
@@ -414,7 +414,7 @@ public class AgentSuit extends Base_Class{
 	
 	public void Logout() throws AWTException, IOException {
 		try {
-			Thread.sleep(5000);
+			Thread.sleep(2000);
 			if (ElementDisplayed(welcome.L_username)) {
 				Thread.sleep(2000);
 				welcome.clickUsername();
@@ -426,7 +426,7 @@ public class AgentSuit extends Base_Class{
 				Log.error("Logout Not Visiable");
 			}
 			//driver.quit();
-			killExcel();
+			//killExcel();
 			ExtentTestManager.endTest();
 			ExtentManager.getInstance().flush();
 		} catch (InterruptedException e) {

@@ -25,10 +25,9 @@ public class TC019 extends AdminSuit{
 		driver.get(configloader().getProperty("EndUser_URL"));
 		chatbed.clickChatButton();
 		driver.switchTo().frame(0);
-		Thread.sleep(5000);
-		assertEquals(GetELementValue(formwelcome.L_chatbed_welcomemessage), welcomeMessage);
-		driver.close();
-		Thread.sleep(5000);
+		Thread.sleep(3000);
+		assertEquals(GetELementValue(chatbed.L_message), welcomeMessage);
+		Thread.sleep(2000);
 		driver.switchTo().window(parent);
 		
 	}

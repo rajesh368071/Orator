@@ -33,7 +33,7 @@ public class TC016 extends AgentSuit {
 	
 	
 	public void verifyChatMessage() throws InterruptedException, AWTException, IOException {
-		log.info("Verify Able to Create Ticket");
+		log.info("Verify Card View");
 		//ExtentTestManager.startTest("(16) Verify Able to Create Ticket");
 		routedchat.clickRoutedChat();
 		

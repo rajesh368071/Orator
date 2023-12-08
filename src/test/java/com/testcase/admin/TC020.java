@@ -20,13 +20,9 @@ public class TC020 extends AdminSuit {
 		formwelcome.clickGeneral();
 		formwelcome.clickForms();
 		formwelcome.clickWelcomepage();
-		WaitForElementToBeVisible(formwelcome.L_opening_msg);
-		Thread.sleep(5000);
-		if(!isChecked(formwelcome.L_data_capture_form_checkbox)) {
+		if(!isEnabled(formwelcome.L_data_capture_form_checkbox)) {
 			formwelcome.clickDataCaptureForm();
-			System.out.print("is un-checked");
 		}
-		Thread.sleep(2000);
 		formwelcome.clickSubmit();
 		
 		openNewTab();

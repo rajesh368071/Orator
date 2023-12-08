@@ -54,15 +54,15 @@ public class TC018 extends AgentSuit {
 		
 		driver.switchTo().window(parent);
 		routedchat.clickEscalate();
-		routedchat.selectEscalateChooseSupervisor();
-		routedchat.selectEscalateCategory();
-		routedchat.selectEscalateSubCategory();
+		routedchat.selectEscalateChooseSupervisor("nuon arunmeanith");
+		routedchat.selectEscalateCategory("General");
+		routedchat.selectEscalateSubCategory("Category 1");
 		WaitForElementToBeVisible(routedchat.L_escalate_comment);
 		routedchat.enterComment(message);
 		routedchat.clickSubmit();
 		
-		boolean isPopUpDisplayed = ElementDisplayed(routedchat.L_popup);
-		
+		boolean isPopUpDisplayed = ElementDisplayed(routedchat.L_escalatepopup);
+		Thread.sleep(2000);
 		if(true) {
         	assertEquals(isPopUpDisplayed, true);
 			ExtentSuccessMessage("Chat Escalated Successfully");

@@ -22,8 +22,8 @@ public class SupervisorPage extends Base_Class{
 		}
 	}
 	
-	public By L_toTransferAgent = By.xpath("//div[contains(@class,'group__wrapper') and .='rajesh ganeshagent']");
-	public void clickTransferChatTo() {
+	public void clickTransferChatTo(String superusername) {
+		By L_toTransferAgent = By.xpath("//div[contains(@class,'group__wrapper') and .='"+superusername+"']");
 		try {
 			click(L_toTransferAgent);
 			ExtentTestManager.getTest().log(Status.PASS, "Clicked on Specific Agent");

@@ -36,12 +36,12 @@ public class RoutedChatPage extends Base_Class {
 	public By L_usernamecontact = By.xpath("((//div[@class='chat__boxChat'])[1]/div)[1]//div[@class='chat__userName']");
 	public By L_usernamecontactmychat = By.xpath("((//div[@class='chat__boxChat'])[3]/div)[1]//div[@class='chat__userName']");
 	public By L_usernamecontactchathistory = By.xpath("((//div[@class='chat__boxChat'])[4]/div)[1]//div[@class='chat__userName']");
-	public By L_popup = By.xpath("//div[@role='alertdialog' or .='Chat closed successfully...']");
+	public By L_popup = By.xpath("//div[@class='toast-top-right toast-container'][contains(.,'Chat closed successfully...')]");
 	public By L_previewmessage = By.xpath("//div[@class='quickrpl__container']/div");
 	public By L_mailpopup = By.xpath("//div[@role='alertdialog' or normalize-space()='Chat transcript sent successfully!']");
 	public By L_ticketpopup = By.xpath("//div[@role='alertdialog' or normalize-space()='Ticket created successfully']"); 
 	public By L_card_view_chat = By.xpath("//h2[contains(normalize-space(),'Card View Chats')]");
-	public By L_esclatepopup = By.xpath("//div[@role='alertdialog' or .='Chat escalated successfully...']");
+	public By L_escalatepopup = By.xpath("//div[@class='toast-top-right toast-container'][contains(.,'Chat escalated successfully...')]");
 	public By L_escalated_chat_request = By.xpath("//div[@class='escalated__wrapper ng-star-inserted']//div[@class='chat__userName']");
 	
 	public void clickReviewBord() {
@@ -362,8 +362,8 @@ public class RoutedChatPage extends Base_Class {
 	}
 	
 	public By L_escalate_choose_supervisor = By.xpath("(//mat-select)[1]");
-	public By L_escalate_choose_supervisor_option = By.xpath("//mat-option//span[@class='mat-option-text'][contains(text(), 'rajeshsupervisor one')]");
-	public void selectEscalateChooseSupervisor() {
+	public void selectEscalateChooseSupervisor(String supervisor) {
+		By L_escalate_choose_supervisor_option = By.xpath("//mat-option//span[@class='mat-option-text'][contains(text(), '"+supervisor+"')]");
 		try {
 			click(L_escalate_choose_supervisor);
 			click(L_escalate_choose_supervisor_option);
@@ -374,8 +374,8 @@ public class RoutedChatPage extends Base_Class {
 	}
 	
 	public By L_escalate_category = By.xpath("(//mat-select)[2]");
-	public By L_escalate_category_option = By.xpath("//mat-option//span[@class='mat-option-text'][contains(text(), 'Auto Review')]");
-	public void selectEscalateCategory() {
+	public void selectEscalateCategory(String category) {
+		By L_escalate_category_option = By.xpath("//mat-option//span[@class='mat-option-text'][contains(text(), '"+category+"')]");
 		try {
 			click(L_escalate_category);
 			click(L_escalate_category_option);
@@ -386,8 +386,9 @@ public class RoutedChatPage extends Base_Class {
 	}
 	
 	public By L_escalate_sub_category = By.xpath("(//mat-select)[3]");
-	public By L_escalate_sub_category_option = By.xpath("//mat-option//span[@class='mat-option-text'][contains(text(), 'Category1')]");
-	public void selectEscalateSubCategory() {
+	
+	public void selectEscalateSubCategory(String subcategory) {
+		By L_escalate_sub_category_option = By.xpath("//mat-option//span[@class='mat-option-text'][contains(text(), '"+subcategory+"')]");
 		try {
 			click(L_escalate_sub_category);
 			click(L_escalate_sub_category_option);

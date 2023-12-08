@@ -21,19 +21,16 @@ public class TC023 extends AdminSuit {
 		formwelcome.clickForms();
 		formwelcome.clickWelcomepage();
 		WaitForElementToBeVisible(formwelcome.L_opening_msg);
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		formwelcome.clickaddField();
 		formwelcome.enterFieldName("Address");
 		formwelcome.selectDataType();
 		Thread.sleep(2000);
 		formwelcome.clickSubmit();
-		
-		
 		formwelcome.clickDeleteIcon();
 		formwelcome.clickSubmit();
-		
-		assertEquals(true, true);
-		ExtentSuccessMessage("Address FIeld Deleted ");	
+		assertEquals(GetELementValue(formwelcome.L_popupupdate), "Data updated successfully.");
+		Thread.sleep(4000);
 		
 	}
 }

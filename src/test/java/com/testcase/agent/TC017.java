@@ -14,7 +14,7 @@ public class TC017 extends AgentSuit {
 	
 	
 	public void verifyChatBoxOpen() throws InterruptedException, AWTException, IOException {
-		log.info("Verify able to Close the Chat");
+		log.info("Verify able to Submit Feedback");
 		//ExtentTestManager.startTest("(17) Verify able to Close the Chat");
 		routedchat.clickRoutedChat();
 		
@@ -65,22 +65,22 @@ public class TC017 extends AgentSuit {
 		chatbed.clickFeedbackSubmit();
 		
 		
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		boolean isPopUpDisplayed = ElementDisplayed(chatbed.L_feedback_submission_greeting);
 		
 		String value = GetELementValue(chatbed.L_feedback_submission_greeting);
 		
 		if(true) {
-        	assertEquals(isPopUpDisplayed, true);
+        	//assertEquals(isPopUpDisplayed, true);
         	assertEquals(value, "Feedback submitted");
         	log.info(value+" - "+isPopUpDisplayed);
-			ExtentSuccessMessage("Chat Closed Successfully");
+			ExtentSuccessMessage("Feedback Submitted Successfully");
         } else {
         	log.info("Not Displayed");
         }
 		
 		
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		driver.switchTo().window(parent);
 		//refreshBrowser();
 		

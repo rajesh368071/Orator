@@ -63,9 +63,9 @@ public class TC021 extends AgentSuit {
 		
 		driver.switchTo().window(parent);
 		routedchat.clickEscalate();
-		routedchat.selectEscalateChooseSupervisor();
-		routedchat.selectEscalateCategory();
-		routedchat.selectEscalateSubCategory();
+		routedchat.selectEscalateChooseSupervisor("nuon arunmeanith");
+		routedchat.selectEscalateCategory("General");
+		routedchat.selectEscalateSubCategory("Category 1");
 		WaitForElementToBeVisible(routedchat.L_escalate_comment);
 		routedchat.enterComment(message);
 		routedchat.clickSubmit();
@@ -84,23 +84,20 @@ public class TC021 extends AgentSuit {
 		driver.switchTo().frame(0);
 		ScrollUntilElementVisible(chatbed.L_message);
 		WaitForElementToBeVisible(chatbed.L_message);
+		Thread.sleep(2000);
 		String content = GetELementValue(chatbed.L_message);
 		
 		//log.info(content+"-"+ superuser_message);
-		
-		if(name.equals(content)) {
+		if(true) {
         	assertEquals(content, superuser_message);
         	log.info(content+" "+ superuser_message);
 			ExtentSuccessMessage("Message Received");
-        } else {
-        	log.info(superuser_message+" -"+content);
-        }
-		
+		}
 		WaitForPageLoad();
 		
 	
 		
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		driver.switchTo().window(parent);
 		
 		

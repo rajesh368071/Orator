@@ -11,6 +11,7 @@ public class FormsWelcomePage extends Base_Class {
 	public By L_general = By.xpath("//span[contains(., 'General')]");
 	public By L_forms = By.xpath("//span[contains(., 'Forms')]");
 	public By L_welocmepage = By.xpath("//span[contains(., 'Welcome Page')]");
+	public By L_faqcheckbox = By.xpath("//mat-checkbox[@id='mat-checkbox-1']");
 	public By L_addField = By.xpath("(//img[@src='assets/images/add.svg'])[last()]");
 	public By L_newEmptyTextField = By.xpath("(//tbody//input[@placeholder='Text'])[last()]");
 	public By L_newEmptyDataTypeField = By.xpath("(//tbody//mat-select)[last()]");
@@ -20,11 +21,12 @@ public class FormsWelcomePage extends Base_Class {
 	public By L_goAnynomous = By.xpath("//mat-checkbox//span[contains(.,'Enable Go Anonymous option')]");
 	public By L_wrampupAggrement = By.xpath("//mat-checkbox//span[contains(.,'Include clickwrap agreement')]");
 	
+	public By L_popupupdate = By.xpath("//div[@class='toast-top-right toast-container'][contains(.,'Data updated successfully.')]");
+	
 	
 	//check visibility
 	public By L_webwidget = By.xpath("//span[contains(., 'Web Widget')]");
-	public By L_chatbed_welcomemessage = By.xpath("//div[@class='normal-msg ng-tns-c0-0 ng-star-inserted']");
-	public By L_faq = By.xpath("//mat-checkbox//span[contains(.,'FAQ')]");
+	public By L_faq = By.xpath("//mat-checkbox[@id='mat-checkbox-1']//input[@id='mat-checkbox-1-input']");
 	public By L_submit = By.xpath("//div[@class='btn btn__accept']");
 	public By L_opening_msg = By.xpath("(//div[@class='ck ck-editor__main'])[1]");
 	public By L_data_capture_form_checkbox = By.xpath("//input[@id='mat-checkbox-2-input']");
@@ -62,7 +64,7 @@ public class FormsWelcomePage extends Base_Class {
 	
 	public void clickFAQ() throws InterruptedException {
 		try {
-			click(L_faq);
+			click(L_faqcheckbox);
 			ExtentTestManager.getTest().log(Status.PASS, "FAQs CHeckBox Clicked SUccessfully");
 		} catch (Exception e) {
 			ExtentTestManager.getTest().log(Status.FAIL, "FAQs Check Box Not Clicked ");
