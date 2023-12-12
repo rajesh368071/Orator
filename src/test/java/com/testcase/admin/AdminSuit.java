@@ -41,6 +41,7 @@ import com.pages.admin.QuickReplyPage;
 import com.pages.admin.ThemePage;
 import com.pages.admin.TicketPage;
 import com.pages.admin.UserManagementPage;
+import com.pages.agent.RoutedChatPage;
 import com.pages.endusers.ChatbedPage;
 
 public class AdminSuit extends Base_Class{
@@ -68,6 +69,7 @@ public class AdminSuit extends Base_Class{
 	ChatFeedbackPage chatfeedback = new ChatFeedbackPage();
 	ThemePage theme = new ThemePage();
 	ConfigurationPage configuration = new ConfigurationPage();
+	RoutedChatPage routedchat = new RoutedChatPage();
 	
 	//Testcases Obj
 	TC001 tc001;
@@ -115,6 +117,8 @@ public class AdminSuit extends Base_Class{
 	TC043 tc043;
 	TC044 tc044;
 	TC045 tc045;
+	TC046 tc046;
+	TC047 tc047;
 
 
 	
@@ -176,6 +180,8 @@ public class AdminSuit extends Base_Class{
 			tc043 = new TC043();
 			tc044 = new TC044();
 			tc045 = new TC045();
+			tc046 = new TC046();
+			tc047 = new TC047();
 			
 	}
 	
@@ -499,6 +505,20 @@ public class AdminSuit extends Base_Class{
 					context.setAttribute("fileName", "Login");
 					Login();
 					tc045.verifyHolidayGroupUpdate();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC046":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc046.verifyChatFeedbackPage();
+					Logout();
+					context.setAttribute("fileName", "Logout");
+				break;
+				case "TC047":
+					context.setAttribute("fileName", "Login");
+					Login();
+					tc047.verifyChatFeedbackPage();
 					Logout();
 					context.setAttribute("fileName", "Logout");
 				break;

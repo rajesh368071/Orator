@@ -12,7 +12,7 @@ public class TC014 extends AdminSuit{
 	public void verifyQuickRepliesPage() throws InterruptedException {
 		log.info("Verify Quick Reply Page displayed");
 		//ExtentTestManager.startTest("14) Verify Quick Reply Page displayed");
-		refreshBrowser();
+		WaitForPageLoad();
 		home.clickSettings();
 		category.clickChat();
 		quickreply.clickQuickReplies();

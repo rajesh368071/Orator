@@ -12,7 +12,7 @@ public class TC010 extends AdminSuit{
 	public void categoryPageVerify() throws InterruptedException {
 		log.info("10) Verify Category Page is Displayed");
 		//ExtentTestManager.startTest("10) Verify Category Page is Displayed");
-		refreshBrowser();
+		WaitForPageLoad();
 		home.clickSettings();
 		category.clickChat();
 		category.clickCategories();

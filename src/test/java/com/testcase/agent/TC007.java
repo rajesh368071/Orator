@@ -34,12 +34,14 @@ public class TC007 extends AgentSuit {
 		Thread.sleep(5000);
 		driver.switchTo().window(parent);
 		
+		/*
 		refreshBrowser();
 		routedchat.clickandenterSearch(name);
 		WaitForPageLoad();
-		
 		WebElement draggable = driver.findElement(routedchat.L_usernamecontact);
 		draggable.click();
+		*/
+		
 		routedchat.clickandenterSearchMyChat(name);
 		routedchat.clickOpenChatArrow();
 		Thread.sleep(3000);

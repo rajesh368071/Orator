@@ -11,7 +11,7 @@ public class TC016 extends AdminSuit{
 	public void verifyCreateQuickReply() throws InterruptedException {
 		log.info("Verify able to Create New Quick Reply");
 		//ExtentTestManager.startTest("16) Verify able to Create New Quick Reply");
-		refreshBrowser();
+		WaitForPageLoad();
 		home.clickSettings();
 		category.clickChat();
 		quickreply.clickQuickReplies();

@@ -15,7 +15,7 @@ public class TC027 extends AdminSuit {
 	
 	public void verifySameWelcomeMessage() throws InterruptedException, AWTException, IOException {
 		log.info("Verify Able to Disable Wramp Up Aggrement Option");
-		refreshBrowser();
+		WaitForPageLoad();
 		//ExtentTestManager.startTest("27) Verify Able to Disable Wramp Up Aggrement Option");
 		home.clickSettings();
 		formwelcome.clickGeneral();

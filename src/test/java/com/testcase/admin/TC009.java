@@ -56,6 +56,7 @@ public class TC009 extends AdminSuit {
 	public void checkInactiveUserLogin() throws AWTException, IOException, InterruptedException {
 		log.info("9) Verify Proper Error Message Shows to User for in active user login");
 		//ExtentTestManager.startTest("9) Verify Proper Error Message Shows to User for in active user login");
+		WaitForPageLoad();
 		home.clickUserManagement();
 		WaitForElementToBeVisible(home.L_newuser);
 		userManage.enterSearch("Ramesh");

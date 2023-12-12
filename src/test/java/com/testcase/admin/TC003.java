@@ -10,8 +10,8 @@ public class TC003 extends AdminSuit{
 	
 	public void verifySettings() throws InterruptedException {
 		log.info("3) Verify Settings is Clicked");
-		
-		ExtentTestManager.startTest("Verify Settings is Clicked");
+		WaitForPageLoad();
+		//ExtentTestManager.startTest("Verify Settings is Clicked");
 		refreshBrowser();
 		home.clickSettings();
 		WaitForElementToBeVisible(home.L_chat);

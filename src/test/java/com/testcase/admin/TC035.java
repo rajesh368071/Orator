@@ -10,7 +10,7 @@ public class TC035 extends AdminSuit {
 	
 	public void verifySameWelcomeMessage() throws InterruptedException {
 		log.info("Verify Ticket Page Displayed");
-		refreshBrowser();
+		WaitForPageLoad();
 		//ExtentTestManager.startTest("35) Verify Ticket Page Displayed");
 		home.clickSettings();
 		ticket.clickGeneral();

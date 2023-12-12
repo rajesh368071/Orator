@@ -11,7 +11,7 @@ public class TC036 extends AdminSuit {
 	
 	public void verifySameWelcomeMessage() throws InterruptedException {
 		log.info("Verify Chat Feedback Page Displayed");
-		refreshBrowser();
+		WaitForPageLoad();
 		ExtentTestManager.startTest("36) Verify Chat Feedback Page Displayed");
 		home.clickSettings();
 		formwelcome.clickGeneral();

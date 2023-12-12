@@ -14,7 +14,7 @@ public class TC002 extends AdminSuit {
 		log.info("2) Verify User Management Page is Displayed");
 		
 		//ExtentTestManager.startTest("Verify User Management Page is Displayed");
-		
+		WaitForPageLoad();
 		home.clickUserManagement();
 		WaitForElementToBeVisible(home.L_newuser);
 		String url = driver.getCurrentUrl();

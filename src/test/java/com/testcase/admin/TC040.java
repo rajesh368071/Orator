@@ -14,7 +14,7 @@ public class TC040 extends AdminSuit {
 	
 	public void verifySameWelcomeMessage() throws InterruptedException, AWTException, IOException {
 		log.info("Verify Theme Change Popup Displayed");
-		refreshBrowser();
+		WaitForPageLoad();
 		//ExtentTestManager.startTest("40) Verify Theme Change Popup Displayed");
 		home.clickSettings();	
 		theme.clickSystem();

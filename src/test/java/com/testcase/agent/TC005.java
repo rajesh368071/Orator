@@ -38,12 +38,8 @@ public class TC005 extends AgentSuit {
 		Thread.sleep(5000);
 		driver.switchTo().window(parent);
 		
-		refreshBrowser();
-		routedchat.clickandenterSearch(name);
-		Thread.sleep(3000);
+		routedchat.clickQuickAction(name);
 		
-		WebElement draggable = driver.findElement(routedchat.L_usernamecontact);
-		draggable.click();
 		routedchat.clickandenterSearchMyChat(name);
 		
 		String contact = driver.findElement(routedchat.L_usernamecontactmychat).getText();
@@ -55,7 +51,6 @@ public class TC005 extends AgentSuit {
         }
 		
 		Thread.sleep(3000);
-		refreshBrowser();
 		
 	}
 

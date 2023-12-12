@@ -15,7 +15,7 @@ public class TC021 extends AdminSuit {
 	@Test
 	public void verifySameWelcomeMessage() throws InterruptedException, AWTException, IOException {
 		log.info("Verify data capture form not displayed when respective check box is not checked");
-		refreshBrowser();
+		WaitForPageLoad();
 		//ExtentTestManager.startTest("21) Verify data capture form not displayed when respective check box is not checked");
 		home.clickSettings();
 		formwelcome.clickGeneral();

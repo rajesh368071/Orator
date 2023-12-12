@@ -43,6 +43,7 @@ public class ChatbedPage extends Base_Class{
 	public By L_message = By.xpath("(//div[contains(@class,'normal-msg')])[1]");
 	public By L_imagemessage = By.xpath("(//div[contains(@class,'chat-message-text')])[1]//img");
 	
+	
 	//verify chat button is displayed
 	public boolean verifyChatBtnDisplayed() throws InterruptedException {
 		return ElementDisplayed(L_chat);
@@ -156,5 +157,11 @@ public class ChatbedPage extends Base_Class{
 	}
 	
 	
+	public boolean checkChatFeedbackTitle(String title) throws InterruptedException {
+		By L_feedbacktitle = By.xpath("//span[contains(text(),'"+title+"')]");
+		ScrollUntilElementVisible(L_feedbacktitle);
+		boolean result = ElementDisplayed(L_feedbacktitle);
+		return result;
+	}
 	
 }

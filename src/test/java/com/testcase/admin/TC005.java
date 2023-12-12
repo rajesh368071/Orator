@@ -8,7 +8,8 @@ public class TC005 extends AdminSuit {
 	
 	public void createNewUser() throws InterruptedException {
 		log.info("5) Verify New User is Created");
-		ExtentTestManager.startTest("Verify New User is Created");
+		//ExtentTestManager.startTest("Verify New User is Created");
+		WaitForPageLoad();
 		home.clickUserManagement();
 		WaitForElementToBeVisible(home.L_newuser);
 		userManage.clickNewUser();

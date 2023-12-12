@@ -13,7 +13,7 @@ public class TC029 extends AdminSuit {
 	
 	public String verifySameWelcomeMessage() throws InterruptedException, AWTException, IOException {
 		log.info("Verify Able to Create New Holiday Group");
-		refreshBrowser();
+		WaitForPageLoad();
 		//ExtentTestManager.startTest("29) Verify Able to Create New Holiday Group");
 		home.clickSettings();
 		holidaygroup.clickGroup();

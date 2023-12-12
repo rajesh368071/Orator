@@ -12,6 +12,7 @@ public class TC006 extends AdminSuit{
 	public void searchCreatedUser() throws InterruptedException {
 		log.info("6) Verify Search Works");
 		//ExtentTestManager.startTest("6) Verify Search Works");
+		WaitForPageLoad();
 		home.clickUserManagement();
 		WaitForElementToBeVisible(home.L_newuser);
 		WaitForElementToBeVisible(userManage.L_search);

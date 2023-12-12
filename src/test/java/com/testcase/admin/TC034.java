@@ -10,7 +10,7 @@ public class TC034 extends AdminSuit {
 	
 	public void verifySameWelcomeMessage() throws InterruptedException {
 		log.info("Verify Able to Perform Search in Manage Group");
-		refreshBrowser();
+		WaitForPageLoad();
 		//ExtentTestManager.startTest("34) Verify Able to Perform Search in Manage Group");
 		home.clickSettings();
 		managegroup.clickGeneral();

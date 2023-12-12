@@ -14,7 +14,7 @@ public class TC030 extends AdminSuit {
 	public void verifySameWelcomeMessage() throws InterruptedException, AWTException, IOException {
 		log.info("Verify Able to display Business Hours Page");
 		
-		refreshBrowser();
+		WaitForPageLoad();
 		ExtentTestManager.startTest("30) Verify Able to display Business Hours Page");
 		home.clickSettings();
 		businesshours.clickGroup();

@@ -17,6 +17,7 @@ public class TC018 extends AdminSuit {
 		log.info("Verify FAQ Button is Displayed if FAQ is Checked in Admin");
 		
 		//ExtentTestManager.startTest("18) Verify FAQ Button is Displayed if FAQ is Checked in Admin");
+		WaitForPageLoad();
 		home.clickSettings();
 		formwelcome.clickGeneral();
 		formwelcome.clickForms();

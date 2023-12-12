@@ -14,7 +14,7 @@ public class TC039 extends AdminSuit {
 	
 	public void verifySameWelcomeMessage() throws InterruptedException, AWTException, IOException {
 		log.info("Verify Themes Page Displayed");
-		refreshBrowser();
+		WaitForPageLoad();
 		ExtentTestManager.startTest("37) Verify Themes Page Displayed");
 		home.clickSettings();	
 		theme.clickSystem();

@@ -14,7 +14,7 @@ public class TC025 extends AdminSuit {
 	
 	public void verifySameWelcomeMessage() throws InterruptedException, AWTException, IOException {
 		log.info("Verify Able to Disable Anonymous chat request Option");
-		refreshBrowser();
+		WaitForPageLoad();
 		//ExtentTestManager.startTest("25) Verify Able to Disable Anonymous chat request Option");
 		home.clickSettings();
 		formwelcome.clickGeneral();
@@ -57,6 +57,8 @@ public class TC025 extends AdminSuit {
 		formwelcome.clickGoAnynomous();
 		WaitForElementToBeVisible(formwelcome.L_submit);
 		formwelcome.clickSubmit();
+		
+		Thread.sleep(3000);
 		
 	}
 }

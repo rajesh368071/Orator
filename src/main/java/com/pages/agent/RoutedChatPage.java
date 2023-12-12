@@ -4,6 +4,7 @@ import java.awt.event.KeyEvent;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 
 import com.BasePackage.Base_Class;
 import com.aventstack.extentreports.Status;
@@ -407,7 +408,27 @@ public class RoutedChatPage extends Base_Class {
 			ExtentTestManager.getTest().log(Status.FAIL, "Comment Not Entered");
 		}
 	}
-
+	
+	//div[@class='widget__chat box__border notification__wrapper ng-star-inserted']//div[@class='btn btn__accept']
+	//div[@class='widget__chat box__border notification__wrapper ng-star-inserted']//div[contains(text(), 'Rajesh')]/..
+	
+	public By L_quick_action_popup_name = By.xpath("//textarea");
+	public void clickQuickAction(String name) throws InterruptedException {
+		By quickactionaccept = By.xpath("//div[@class='widget__chat box__border notification__wrapper ng-star-inserted']//div[contains(text(), '"+name+"')]/../../../../../..//div[@class='btn btn__accept']");
+		try {
+			click(quickactionaccept);
+			ExtentTestManager.getTest().log(Status.PASS, "Chat Request Accepted from Quick Reply");
+		} catch (Exception e) {
+			refreshBrowser();
+			clickandenterSearch(name);
+			Thread.sleep(3000);
+			
+			WebElement draggable = driver.findElement(L_usernamecontact);
+			draggable.click();
+			clickandenterSearch(name);
+			ExtentTestManager.getTest().log(Status.PASS, "Chat Request accepted from Routed Chat");
+		} 
+	}
 	
 	
 }

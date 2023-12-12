@@ -12,7 +12,7 @@ public class TC011 extends AdminSuit{
 	public void verifyFieldsDisplayed() throws InterruptedException {
 		log.info("Verify Components are displayed in Category Model Box");
 		//ExtentTestManager.startTest("11) Verify Components are displayed in Category Model Box");
-		refreshBrowser();
+		WaitForPageLoad();
 		home.clickSettings();
 		category.clickChat();
 		category.clickCategories();

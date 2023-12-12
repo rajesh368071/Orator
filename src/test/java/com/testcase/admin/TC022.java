@@ -15,6 +15,7 @@ public class TC022 extends AdminSuit {
 	public void verifySameWelcomeMessage() throws InterruptedException, AWTException, IOException {
 		log.info("Verify Able to add New Field to Data Capture Form");
 		//refreshBrowser();
+		WaitForPageLoad();
 		//ExtentTestManager.startTest("22) Verify Able to add New Field to Data Capture Form");
 		home.clickSettings();
 		formwelcome.clickGeneral();

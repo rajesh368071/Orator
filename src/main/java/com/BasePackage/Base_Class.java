@@ -246,9 +246,9 @@ public class Base_Class {
 		HandleSessionPopUp();
 	}
 
-	public static void WaitForPageLoad() {
+	public static void WaitForPageLoad() throws InterruptedException {
 		ExtentSuccessMessage("Waiting for webpage to load completely");
-		WebDriverWait wait = new WebDriverWait(driver, 60000);
+		WebDriverWait wait = new WebDriverWait(driver, 80000); //6, remove one zero
 		Function<WebDriver, Boolean> function = new Function<WebDriver, Boolean>() {
 			@Override
 			public Boolean apply(WebDriver arg0) {
@@ -262,6 +262,7 @@ public class Base_Class {
 			}
 		};
 		wait.until(function);
+		Thread.sleep(4000);
 	}
 
 	public static void DeleteFiles(String Path) {
@@ -291,7 +292,7 @@ public class Base_Class {
 	
 	
 	public static void click(By element) throws InterruptedException {
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.presenceOfElementLocated(element));
 		wait.until(ExpectedConditions.elementToBeClickable(element)).click();

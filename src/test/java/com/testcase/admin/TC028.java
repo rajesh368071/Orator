@@ -14,7 +14,7 @@ public class TC028 extends AdminSuit {
 
 	public void verifySameWelcomeMessage() throws InterruptedException, AWTException, IOException {
 		log.info("Verify Holiday Group Page displayed");
-		refreshBrowser();
+		WaitForPageLoad();
 		//ExtentTestManager.startTest("28) Verify Holiday Group Page displayed");
 		home.clickSettings();
 		holidaygroup.clickGroup();

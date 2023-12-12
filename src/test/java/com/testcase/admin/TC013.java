@@ -14,7 +14,7 @@ public class TC013 extends AdminSuit {
 	public void createCategory() throws InterruptedException {
 		log.info("Verify able to Update Category");
 		//ExtentTestManager.startTest("13) Verify able to Update Category");
-		refreshBrowser();
+		WaitForPageLoad();
 		home.clickSettings();
 		category.clickChat();
 		category.clickCategories();

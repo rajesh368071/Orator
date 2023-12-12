@@ -14,7 +14,7 @@ public class TC023 extends AdminSuit {
 	
 	public void verifySameWelcomeMessage() throws InterruptedException, AWTException, IOException {
 		log.info("Verify able to delete Field from data Capture form");
-		refreshBrowser();
+		WaitForPageLoad();
 		//ExtentTestManager.startTest("23) Verify able to delete Field from data Capture form");
 		home.clickSettings();
 		formwelcome.clickGeneral();

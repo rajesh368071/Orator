@@ -23,12 +23,13 @@ public class TC016 extends AgentSuit {
 		Thread.sleep(5000);
 	}
 	
-	public void check() {
-		routedchat.clickandenterSearch(name);
+	public void check() throws InterruptedException {
+		/*routedchat.clickandenterSearch(name);
 		WaitForPageLoad();
 		
 		WebElement draggable = driver.findElement(routedchat.L_usernamecontact);
-		draggable.click();
+		draggable.click();*/
+		routedchat.clickQuickAction(name);
 	}
 	
 	
@@ -49,7 +50,7 @@ public class TC016 extends AgentSuit {
 		common();
 		//
 		driver.switchTo().window(parent);
-		refreshBrowser();
+		//refreshBrowser();
 		//
 		check();
 		//
@@ -61,7 +62,7 @@ public class TC016 extends AgentSuit {
 		common();
 		//
 		driver.switchTo().window(parent);
-		refreshBrowser();
+		//refreshBrowser();
 		//
 		check();
 		//

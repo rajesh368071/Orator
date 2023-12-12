@@ -10,8 +10,8 @@ public class TC017 extends AdminSuit{
 	
 	public void verifyWelcomePage() throws InterruptedException {
 		log.info("Verify Forms Welcome Page Displayed");
-		ExtentTestManager.startTest("17) Verify Forms Welcome Page Displayed");
-		refreshBrowser();
+		//ExtentTestManager.startTest("17) Verify Forms Welcome Page Displayed");
+		WaitForPageLoad();
 		home.clickSettings();
 		formwelcome.clickGeneral();
 		formwelcome.clickForms();

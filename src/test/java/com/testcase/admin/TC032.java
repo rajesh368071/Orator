@@ -10,7 +10,7 @@ public class TC032 extends AdminSuit{
 	
 	public void verifySameWelcomeMessage() throws InterruptedException {
 		log.info("Verify Manage Group Page Displayed");
-		refreshBrowser();
+		WaitForPageLoad();
 		//ExtentTestManager.startTest("32) Verify Manage Group Page Displayed");
 		home.clickSettings();
 		managegroup.clickGeneral();

@@ -14,6 +14,7 @@ public class TC044 extends AdminSuit {
 	
 	public void verifyConfigurationPageDisplayed() throws InterruptedException, AWTException, IOException {
 		log.info("Verify Configuration Page Displayed");
+		WaitForPageLoad();
 		home.clickSettings();	
 		category.clickChat();
 		configuration.clickConfiguration();

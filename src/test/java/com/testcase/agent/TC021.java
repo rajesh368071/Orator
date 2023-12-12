@@ -34,12 +34,14 @@ public class TC021 extends AgentSuit {
 		Thread.sleep(5000);
 		driver.switchTo().window(parent);
 		
-		refreshBrowser();
+		/*refreshBrowser();
 		routedchat.clickandenterSearch(name);
 		WaitForPageLoad();
 		
 		WebElement draggable = driver.findElement(routedchat.L_usernamecontact);
-		draggable.click();
+		draggable.click();*/
+		
+		routedchat.clickQuickAction(name);
 		routedchat.clickandenterSearchMyChat(name);
 		routedchat.clickOpenChatArrow();
 		Thread.sleep(3000);
@@ -60,6 +62,8 @@ public class TC021 extends AgentSuit {
 		login.enterPassword(configloader().getProperty("SupervisorPWD"));
 		login.enterCaptcha();
 		login.clickSignin();
+		Thread.sleep(5000);
+		WaitForElementToBeVisible(L_usernamedropdown);
 		
 		driver.switchTo().window(parent);
 		routedchat.clickEscalate();

@@ -13,7 +13,7 @@ public class TC031 extends AdminSuit {
 	
 	public void verifySameWelcomeMessage() throws InterruptedException, AWTException, IOException {
 		log.info("Verify Able to Create New Business Hours");
-		refreshBrowser();
+		WaitForPageLoad();
 		//ExtentTestManager.startTest("31) Verify Able to Create New Business Hours");
 		home.clickSettings();
 		businesshours.clickGroup();

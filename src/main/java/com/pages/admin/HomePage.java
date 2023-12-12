@@ -9,8 +9,8 @@ import com.extentReports.ExtentTestManager;
 public class HomePage extends Base_Class{
 	
 	public By L_reviewbord = By.xpath("//span[contains(.,'Review Board')]");
-	public By L_usermanagement = By.xpath("//span[contains(.,'User Management')]");
-	public By L_settings = By.xpath("//span[contains(.,'Settings')]");
+	public By L_usermanagement = By.xpath("(//span[contains(.,'User Management')])[2]");
+	public By L_settings = By.xpath("(//span[contains(.,'Settings')])[2]");
 	public By L_chat = By.xpath("//div[@class='mat-list-item-content']/span[contains(., 'Chat')]");
 	public By L_newuser = By.xpath("//span[text()='New User']");
 	
